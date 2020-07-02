@@ -1,6 +1,6 @@
 package: AliPhysics
 version: "%(commit_hash)s"
-tag: master
+tag: v2zdc
 requires:
   - AliRoot
   - RooUnfold
@@ -9,7 +9,7 @@ requires:
   - QnTools
 build_requires:
   - "Xcode:(osx.*)"
-source: https://github.com/alisw/AliPhysics
+source: https://github.com/kreisl/AliPhysics
 env:
   ALICE_PHYSICS: "$ALIPHYSICS_ROOT"
 prepend_path:

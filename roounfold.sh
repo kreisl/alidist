@@ -1,7 +1,7 @@
 package: RooUnfold
 version: "%(tag_basename)s"
-tag: V02-00-01-alice4
-source: https://github.com/alisw/RooUnfold
+tag: vcpp17
+source: https://github.com/kreisl/RooUnfold
 requires:
  - ROOT
  - boost
