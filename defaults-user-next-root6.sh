@@ -16,5 +16,5 @@ overrides:
     tag: v5-09-54a
   AliPhysics:
     version: "%(tag_basename)s"
-    tag: v5-09-54a-01
+    tag: v2zdc
 ---
