@@ -1,6 +1,6 @@
 package: AliRoot
 version: "%(commit_hash)s"
-tag: master
+tag: norpath
 requires:
   - ROOT
   - DPMJET
@@ -16,7 +16,7 @@ env:
   ALICE_ROOT: "$ALIROOT_ROOT"
 prepend_path:
   ROOT_INCLUDE_PATH: "$ALIROOT_ROOT/include"
-source: https://github.com/alisw/AliRoot
+source: https://github.com/kreisl/AliRoot
 incremental_recipe: |
   cmake --build . -- ${JOBS:+-j$JOBS} install
   ctest -R load_library --output-on-failure ${JOBS:+-j $JOBS}

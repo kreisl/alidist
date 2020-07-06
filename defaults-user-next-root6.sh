@@ -13,7 +13,8 @@ disable:
 overrides:
   AliRoot:
     version: "%(tag_basename)s"
-    tag: v5-09-54a
+#    tag: v5-09-54a
+#    tag: v5-09-54a-norpath
   AliPhysics:
     version: "%(tag_basename)s"
     tag: v2zdc
