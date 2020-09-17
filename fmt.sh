@@ -1,6 +1,6 @@
 package: fmt
 version: "%(tag_basename)s"
-tag: 6.1.2
+tag: 7.0.1
 source: https://github.com/fmtlib/fmt
 requires:
   - "GCC-Toolchain:(?!osx)"
@@ -10,7 +10,7 @@ prepend_path:
   ROOT_INCLUDE_PATH: "$FMT_ROOT/include"
 ---
 #!/bin/bash -e
-cmake $SOURCEDIR -DCMAKE_INSTALL_PREFIX=$INSTALLROOT -DFMT_TEST=OFF
+cmake $SOURCEDIR -DCMAKE_INSTALL_PREFIX=$INSTALLROOT -DFMT_TEST=OFF -DBUILD_SHARED_LIBS=TRUE -DCMAKE_POSITION_INDEPENDENT_CODE=TRUE
 
 make ${JOBS+-j $JOBS}
 make install
@@ -32,4 +32,5 @@ module load BASE/1.0 ${GCC_TOOLCHAIN_REVISION:+GCC-Toolchain/$GCC_TOOLCHAIN_VERS
 # Our environment
 set FMT_ROOT \$::env(BASEDIR)/$PKGNAME/\$version
 prepend-path ROOT_INCLUDE_PATH \$FMT_ROOT/include
+prepend-path LD_LIBRARY_PATH \$FMT_ROOT/lib64
 EoF
